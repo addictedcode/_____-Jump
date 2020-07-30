@@ -1,0 +1,13 @@
+diff a/_____-Jump/Assets/Scripts/HO - Event Broadcasting/Spawning.cs.meta b/_____-Jump/Assets/Scripts/HO - Event Broadcasting/Spawning.cs.meta	(rejected hunks)
+@@ -0,0 +1,11 @@
++fileFormatVersion: 2
++guid: c6d13e6637ee5564dabf64ad944ec9f2
++MonoImporter:
++  externalObjects: {}
++  serializedVersion: 2
++  defaultReferences: []
++  executionOrder: 0
++  icon: {instanceID: 0}
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
