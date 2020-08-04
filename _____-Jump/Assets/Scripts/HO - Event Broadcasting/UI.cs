@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -22,4 +23,8 @@ public class UI : MonoBehaviour
         EventBroadcaster.Instance.PostEvent(EventNames.HOEventBroadcasting.INPUT_NUMBER_BALLS_CHANGED, param);
     }
 
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenuScene"); 
+    }
 }
