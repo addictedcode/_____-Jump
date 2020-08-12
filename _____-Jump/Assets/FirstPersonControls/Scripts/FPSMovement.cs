@@ -8,14 +8,16 @@ public class FPSMovement : MonoBehaviour
 
     [SerializeField] LayerMask groundMask;
 
-    [SerializeField] private float walkSpeed = 500f;
-    [SerializeField] private float sprintSpeed = 750f;
-    [SerializeField] private float jumpStrength = 690f;
+    [SerializeField] private float walkSpeed = 10f;
+    [SerializeField] private float sprintSpeed = 20f;
+    [SerializeField] private float jumpStrength = 10f;
+    //[SerializeField] private float fallSpeed = 1.0f;
 
     private float x;
     private float z;
     private bool isJumping;
     private bool isSprinting = false;
+
 
 
     [SerializeField] private bool isGrounded;
@@ -53,7 +55,8 @@ public class FPSMovement : MonoBehaviour
     private void move()
     {
         Vector3 move = rb.transform.right * x + rb.transform.forward * z;
-        rb.velocity = rb.transform.up * rb.velocity.y + (move * speed * Time.fixedDeltaTime);
+        rb.velocity = (new Vector3(move.x * speed, rb.velocity.y, move.z * speed));
+        //rb.velocity = rb.transform.up * rb.velocity.y + (move * speed * Time.fixedDeltaTime); // richmond code
     }
 
     private void jump()
@@ -61,8 +64,8 @@ public class FPSMovement : MonoBehaviour
         checkGrounded();
         if (isJumping && isGrounded)
         {
-            Vector3 jump = transform.up * jumpStrength;
-            rb.AddForce(jump);
+            rb.velocity = (new Vector3(rb.velocity.x, 0, rb.velocity.z));
+            rb.velocity += Vector3.up * jumpStrength;
         }
     }
 

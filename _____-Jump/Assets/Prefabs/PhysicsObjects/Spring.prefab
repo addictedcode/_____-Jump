@@ -143,5 +143,5 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  springForce: 600
-  springForceLimit: 1000
+  springForce: 30
+  springForceLimit: 40
