@@ -18,7 +18,7 @@ public class FPSMovement : MonoBehaviour
     private bool isSprinting = false;
 
 
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
 
     private float speed = 0f;
 
@@ -40,7 +40,6 @@ public class FPSMovement : MonoBehaviour
         z = Input.GetAxis("Vertical");
 
         isJumping = Input.GetButtonDown("Jump");
-
         //if (Input.GetButtonDown("Sprint") && !isSprinting)
         //{
         //    isSprinting = true;
@@ -70,7 +69,7 @@ public class FPSMovement : MonoBehaviour
     private void checkGrounded()
     {
         float DistanceToTheGround = rb.gameObject.GetComponent<Collider>().bounds.extents.y;
-        isGrounded = Physics.Raycast(this.transform.position, Vector3.down, DistanceToTheGround + 0.1f, groundMask);
+        isGrounded = Physics.Raycast(rb.transform.position, Vector3.down, DistanceToTheGround + 0.1f, groundMask);
     }
 
     private void sprint()

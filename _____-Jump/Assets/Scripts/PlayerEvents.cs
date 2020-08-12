@@ -27,16 +27,16 @@ public class PlayerEvents : MonoBehaviour
         float springForce = param.GetFloatExtra("springForce", 1000);
         float springForceLimit = param.GetFloatExtra("springForceLimit", 2500);
         float gravityModifier = rb.velocity.y;
-        
-        if(gravityModifier < -1)
+
+        if(gravityModifier >= 10 || gravityModifier < -10)
         {
-            springForce *= gravityModifier / -9; 
-            //the gravity modifier's function is to strengthen the spring force when the player is already falling with a higher y velocity
+            springForce *= -gravityModifier / 10;
         }
-        if(springForce > springForceLimit)
+        if (springForce > springForceLimit)
         {
             springForce = springForceLimit;
         }
-        rb.AddForce(Vector3.up * springForce);
+        rb.velocity = rb.transform.up + (Vector3.up * springForce * Time.fixedDeltaTime);
+        //rb.AddForce(Vector3.up * springForce);
     }
 }

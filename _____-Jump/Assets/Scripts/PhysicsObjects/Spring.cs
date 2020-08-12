@@ -28,7 +28,6 @@ public class Spring : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("BOING");
             Parameters param = new Parameters();
             param.PutExtra("springForce", springForce);
             param.PutExtra("springForceLimit", springForceLimit);
