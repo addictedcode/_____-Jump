@@ -36,6 +36,8 @@ public class PlayerEvents : MonoBehaviour
         {
             springForce = springForceLimit;
         }
-        rb.velocity = rb.transform.up + (Vector3.up * springForce);
+        //rb.velocity = rb.transform.up + (Vector3.up * springForce);
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        rb.AddForce(Vector3.up * springForce);
     }
 }

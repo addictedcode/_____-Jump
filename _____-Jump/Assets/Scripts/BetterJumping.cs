@@ -27,6 +27,5 @@ public class BetterJumping : MonoBehaviour
         {
             rb.velocity += Vector3.up * Physics.gravity.y * (highJumpMultiplier - 1) * Time.fixedDeltaTime;        
         }
-        Debug.Log(rb.velocity.y);
     }
 }

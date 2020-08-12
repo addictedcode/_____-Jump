@@ -21,7 +21,7 @@ public class Spring : MonoBehaviour
     }
     private void checkGrounded()
     {
-        float DistanceToTheGround = rb.gameObject.GetComponent<MeshCollider>().bounds.extents.y;
+        float DistanceToTheGround = rb.gameObject.GetComponent<Collider>().bounds.extents.y;
         isGrounded = Physics.Raycast(rb.transform.position, Vector3.down, DistanceToTheGround + 0.1f, groundMask);
     }
     private void OnTriggerEnter(Collider other)
