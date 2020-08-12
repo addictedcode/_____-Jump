@@ -11,6 +11,10 @@ public class EventNames {
 		public const string BUTTON_SPAWN_BALLS_PRESSED = "BUTTON_SPAWN_BALLS_PRESSED";
 		public const string BUTTON_CLEAR_ALL_PRESSED = "BUTTON_CLEAR_ALL_PRESSED";
 	}
+	public class PhysicsEvents
+	{
+		public const string SPRING_IS_TRIGGERED = "SPRING_IS_TRIGGERED";
+	}
 
 }
 
