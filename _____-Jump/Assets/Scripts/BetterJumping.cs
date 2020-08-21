@@ -14,7 +14,6 @@ public class BetterJumping : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         if (rb.velocity.y < 0)
         {
             rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;

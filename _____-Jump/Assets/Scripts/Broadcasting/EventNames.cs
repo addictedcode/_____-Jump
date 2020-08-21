@@ -14,6 +14,7 @@ public class EventNames {
 	public class PhysicsEvents
 	{
 		public const string SPRING_IS_TRIGGERED = "SPRING_IS_TRIGGERED";
+		public const string GROUNDED_IS_TRIGGERED = "GROUNDED_IS_TRIGGERED";
 	}
 
 }

@@ -23,7 +23,6 @@ public class PlayerEvents : MonoBehaviour
 
     private void springTrigger(Parameters param)
     {
-
         float springForce = param.GetFloatExtra("springForce", 60);
         float springForceLimit = param.GetFloatExtra("springForceLimit", 250);
         float gravityModifier = rb.velocity.y;
@@ -39,4 +38,7 @@ public class PlayerEvents : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(Vector3.up * springForce);
     }
+
+
+
 }

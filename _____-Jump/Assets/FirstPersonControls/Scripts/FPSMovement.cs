@@ -27,6 +27,9 @@ public class FPSMovement : MonoBehaviour
     {
         getInput();
         jump();
+        if (isGrounded) {
+            EventBroadcaster.Instance.PostEvent(EventNames.PhysicsEvents.GROUNDED_IS_TRIGGERED);
+        }
     }
 
     void FixedUpdate()
@@ -41,15 +44,6 @@ public class FPSMovement : MonoBehaviour
         z = Input.GetAxis("Vertical");
 
         isJumping = Input.GetButtonDown("Jump");
-
-        //if (Input.GetButtonDown("Sprint") && !isSprinting)
-        //{
-        //    isSprinting = true;
-        //}
-        //else if (Input.GetButtonUp("Sprint"))
-        //{
-        //    isSprinting = false;
-        //}
     }
 
     private void move()
