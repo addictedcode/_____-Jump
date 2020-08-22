@@ -23,6 +23,7 @@ public class PlayerEvents : MonoBehaviour
 
     private void springTrigger(Parameters param)
     {
+
         float springForce = param.GetFloatExtra("springForce", 60);
         float springForceLimit = param.GetFloatExtra("springForceLimit", 250);
         float gravityModifier = rb.velocity.y;
