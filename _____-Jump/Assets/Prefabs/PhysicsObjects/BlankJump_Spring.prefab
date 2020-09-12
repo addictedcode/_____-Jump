@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7832802156570124576}
   - component: {fileID: 3169793752281447469}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8ba67c79d650b914698e93cab6684fd3, type: 3}
+  - {fileID: 2100000, guid: 7d0346a2c07612442929142e0312d542, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 1489813653117369111}
   - component: {fileID: 4406516831688177037}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +236,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8ba67c79d650b914698e93cab6684fd3, type: 3}
+  - {fileID: 2100000, guid: 1bb89dbbcd1615d4494992b3536c57ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
