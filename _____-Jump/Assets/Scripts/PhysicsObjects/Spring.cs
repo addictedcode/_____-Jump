@@ -6,7 +6,7 @@ public class Spring : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
     [SerializeField] private LayerMask groundMask;
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
 
     [SerializeField] private float springForce = 1000;
     [SerializeField] private float springForceLimit = 2500;
@@ -18,11 +18,15 @@ public class Spring : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
     }
     private void checkGrounded()
     {
         float DistanceToTheGround = rb.gameObject.GetComponent<Collider>().bounds.extents.y;
-        isGrounded = Physics.Raycast(rb.transform.position, Vector3.down, DistanceToTheGround + 0.1f, groundMask);
+        isGrounded = Physics.Raycast(rb.transform.position, Vector3.down, DistanceToTheGround - .2f, groundMask);
     }
     private void OnTriggerEnter(Collider other)
     {

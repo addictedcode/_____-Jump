@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Rough Metal
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _NORMALMAP
+  m_ShaderKeywords: _EMISSION _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 30832908198a6f247bf1e9d5ad25a040, type: 3}
+        m_Texture: {fileID: 2800000, guid: cee7768dae5c46a429a1f9a3e9ddcb5b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -36,12 +36,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: be86f6d6082f7d34ba532de7864a0e17, type: 3}
-        m_Scale: {x: 0.01, y: 0.01}
+        m_Texture: {fileID: 2800000, guid: b7c8ec5457fff904b8354330ed2e85ed, type: 3}
+        m_Scale: {x: 20, y: 20}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cb5d4a6cdd987b64581cbdfe21da1b6b, type: 3}
-        m_Scale: {x: 0.01, y: 0.01}
+        m_Texture: {fileID: 2800000, guid: ba656bd3d2355f34f9976db6b49b6922, type: 3}
+        m_Scale: {x: 20, y: 20}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 399bab98279dd3849b90103c93b28844, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0.8746934, b: 1, a: 1}
+    - _Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+    - _EmissionColor: {r: 0, g: 0.8745098, b: 1, a: 1}

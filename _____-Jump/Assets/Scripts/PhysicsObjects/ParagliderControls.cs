@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,8 +33,9 @@ public class ParagliderControls : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Mouse1))
         {
+            
             if(paraglider == null) paraglider = GameObject.Instantiate(paragliderPrefab, Camera.transform);
 
             if (Camera.transform.localRotation.eulerAngles.x > 70 &&
@@ -52,7 +54,7 @@ public class ParagliderControls : MonoBehaviour
             }
             
         }
-        if (!Input.GetKey(KeyCode.Q))
+        if (!Input.GetKey(KeyCode.Mouse1))
         {
             Destroy(paraglider);
         }
