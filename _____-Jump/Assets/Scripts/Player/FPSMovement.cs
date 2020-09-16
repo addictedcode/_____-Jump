@@ -75,7 +75,8 @@ public class FPSMovement : MonoBehaviour
     private void checkGrounded()
     {
         float DistanceToTheGround = rb.gameObject.GetComponent<Collider>().bounds.extents.y;
-        isGrounded = Physics.Raycast(rb.transform.position, Vector3.down, DistanceToTheGround + 0.1f, groundMask);
+        //isGrounded = Physics.Raycast(rb.transform.position, Vector3.down, DistanceToTheGround + 0.1f, groundMask);
+        isGrounded = Physics.BoxCast(rb.transform.position, new Vector3 (0.4f, 0.1f, 0.4f), Vector3.down, Quaternion.identity ,DistanceToTheGround + 0.1f, groundMask);
     }
 
     private void sprint()
